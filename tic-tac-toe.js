@@ -38,3 +38,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const squares = document.querySelectorAll('#board div');
+  
+    squares.forEach(square => {
+      square.classList.add('square'); // Add the 'square' class to each div element
+  
+      // Add event listener for mouse enter
+      square.addEventListener('mouseenter', function() {
+        square.classList.add('hover'); // Add the 'hover' class when the mouse enters the square
+      });
+  
+      // Add event listener for mouse leave
+      square.addEventListener('mouseleave', function() {
+        square.classList.remove('hover'); // Remove the 'hover' class when the mouse leaves the square
+      });
+    });
+  });
+
+  
+
